@@ -259,10 +259,20 @@ small {
 .tiny {
   font-size: var(--size_12);
 }
+
 @media(max-width:992px){
-  h3{
+  .display02{
+    font-size: var(--size_48);
+  }
+  .display03{
+     font-size: var(--size_32);
+  }
+  h1, .h1{
+    font-size: var(--size_28);
+  }
+  h3, .h3{
     font-size: var(--size_20);
-}
+  }
 }
 /*文字白色*/
 .text-white {
@@ -283,9 +293,9 @@ a {
   text-decoration: none;
 }
 a:hover,
-a:focus {
+a:focus, a:active {
   text-decoration: none;
-  color: var(--color-black40);
+  color: var(--color-black60);
 }
 
 a:not([href]):not([class]),
@@ -345,10 +355,9 @@ svg {
 }
 .form-control:focus {
   color: #212529;
-  background-color: #fff;
-  border-color: #86b7fe;
+  border-color: var(--color-black60);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(107, 107, 107, 0.25);
 }
 /*按鈕*/
 .btn {
@@ -642,13 +651,26 @@ svg {
   align-items: flex-start;
   overflow: hidden;
   border-radius: 1rem;
+  gap: 1.25rem;
 }
 .card-item-2 {
-  width: calc(100% / 2);
+  width: calc((100% / 2) - .75rem);
 }
 .card-item-3 {
-  width: calc(100% / 3);
+  width: calc((100% / 3) - 1rem);
 }
+.card-border{
+  border: 1px solid var(--color-black80);
+}
+.card-img{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.card-header, .card-body, .card-footer{
+  width: 100%;
+}
+
 @media (max-width: 992px) {
   .card,
   .card-item-2,
@@ -687,6 +709,7 @@ svg {
   white-space: nowrap;
   direction: ltr;
   font-size: 1.5rem;
+  margin: 0
 }
 .icon-160 {
   font-size: 10rem;
@@ -700,4 +723,12 @@ svg {
 }
 .icon-16 {
   font-size: 1rem;
+}
+section{
+  margin-bottom: 180px;
+}
+@media(max-width:992px){
+  section{
+    margin-bottom: 120px;
+  }
 }
